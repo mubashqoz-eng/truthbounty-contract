@@ -51,7 +51,7 @@
     "events:indexing:gas": "node scripts/event-indexing-gates.mjs --write-gas-report",
     "check:reproducibility": "node scripts/check-release-reproducibility.mjs",
     "check:release": "node scripts/check-optimism-sepolia-release.mjs",
-    "build:release-artifacts": "node scripts/buildReleaseArtifacts.mjs",
+    "build:release-artifacts": "node init && node scripts/buildReleaseArtifacts.mjs",
     "check:release-artifacts": "node scripts/buildReleaseArtifacts.mjs --check",
     "check:release:artifacts": "node scripts/check-optimism-sepolia-release.mjs --with-artifacts --artifacts hardhat",
     "check:release:onchain": "node scripts/check-optimism-sepolia-release.mjs --onchain --rpc-url $OPTIMISM_SEPOLIA_RPC_URL",
@@ -117,7 +117,7 @@
   "dependencies": {
     "@openzeppelin/contracts": "^5.6.1",
     "@openzeppelin/contracts-upgradeable": "^5.6.1",
-    "dotenv": "^18.0.3",
+    "dotenv": "^18.0.8",
     "solc": "0.8.37"
   }
 }
